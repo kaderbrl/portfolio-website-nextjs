@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* Colors */
+	:root {
+		--color-background: 255 255 255; /* → #ffffff */
+		--color-primary: 27 204 197; /* → #1bccc5 */
+		--color-secondary: 250 204 21; /* → #facc15 */
+		--color-grey: 75 85 99; /* → #4b5563 */
+		--color-font: 23, 24, 26; /* → #17181a */
+	}
+
+	:root[class~='dark'] {
+		--color-background: 34 40 49; /* → #222831 */
+		--color-primary: 0 255 245; /* → #00FFF5 */
+		--color-secondary: 250 204 21; /* → #facc15 */
+		--color-grey: 52 62 70; /* → #393e46 */
+		--color-font: 229 231 235; /* → #e5e7eb */
+	}
+
+	html {
+		@apply scroll-smooth bg-background;
+	}
+
+	/* Selection */
+	::selection {
+		@apply bg-primary/50 text-black;
+	}
+
+	/* Scrollbar */
+	::-webkit-scrollbar {
+		@apply h-1 rounded-md bg-transparent;
+		@apply w-[10px] rounded-md bg-transparent;
+	}
+
+	::-webkit-scrollbar-track {
+		@apply bg-transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		@apply rounded-md bg-transparent border border-solid border-l-primary border-b-primary border-t-secondary border-r-secondary;
+	}
+}
+
+@layer utilities {
+	section {
+		@apply min-h-screen py-20 lg:px-36 md:px-10 px-5 flex flex-col justify-center items-center border-b border-b-grey/20 dark:border-none;
+
+		&:nth-of-type(even) {
+			@apply bg-white dark:bg-grey;
+		}
+	}
+}
+
+/* Swiper.js */
+.swiper-slide {
+	@apply h-auto !important;
+}
+
+.swiper-pagination-bullet {
+	@apply bg-primary !important;
+}
+
+.blog-swiper {
+	@apply w-full py-12;
+
+	.swiper-slide {
+		@apply w-80 h-auto;
+	}
+}
