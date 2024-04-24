@@ -16,8 +16,8 @@ export const POST = async (req: NextRequest) => {
 
 	try {
 		const { data, error } = await resend.emails.send({
-			from: `Contact Form <${process.env.FROM_EMAIL}>`,
-			to: `${process.env.TO_EMAIL}`,
+			from: `Contact Form <onboarding@resend.dev>`,
+			to: 'kaderbiral25@gmail.com',
 			reply_to: email,
 			subject: '🎉 New submission to your contact form!',
 			react: ContactFormEmail({ name, email, message }) as React.ReactElement,
