@@ -23,7 +23,7 @@ Check the live demo here 👉 [Demo](https://kaderbiral.vercel.app/)
 First clone this repository.
 
 ```shell
-https://github.com/kaderbrl/portfolio-website-nextjs.git
+git clone https://github.com/kaderbrl/portfolio-website-nextjs.git
 ```
 
 Install dependencies. Make sure you already have [`node.js`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
